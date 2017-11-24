@@ -5,8 +5,8 @@
 
 setwd("/Users/nicolestone/Desktop/make.histos")
 
-dynamic = read.table("chip.10.open.dynamic.txt.bed.annotatepeaks.txt", sep="\t", stringsAsFactors=F, header=TRUE, quote = "\"")
-common  = read.table("chip.10.open.stayingopen.txt.bed.annotatepeaks.txt", sep="\t", stringsAsFactors=F, header=TRUE, quote = "\"")
+dynamic = read.table("chip.10.open.dynamic.txt.bed.annotatepeaks.txt", sep="\t", stringsAsFactors=F, header=TRUE, quote = "\"", comment.char = "")
+common  = read.table("chip.10.open.stayingopen.txt.bed.annotatepeaks.txt", sep="\t", stringsAsFactors=F, header=TRUE, quote = "\"", comment.char = "")
 DISTCOLNAME = "Distance.to.TSS"
 #should be empty 
 #dynamic[is.na(dynamic$Distance.to.TSS),]
