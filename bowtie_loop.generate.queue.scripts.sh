@@ -1,6 +1,6 @@
-### MAKE SCRIPTS TO RUN BOWTIE ON ALL ATAC-SEQ FASTQ IN A DIRECTORY ###
+### MAKE SCRIPTS TO RUN BOWTIE ON ALL PAIRED END ATAC-SEQ FASTQ IN A DIRECTORY ###
 ###
-WORKING="/data/home/nstone/HiSeq4000_data/NS16"
+WORKING="/path/to/fastq.gz"
 cd $WORKING
 multimapping=4
 pair_dist=600
