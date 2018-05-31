@@ -16,7 +16,7 @@ for x in  *R1_001.fastq.gz; do
 	ALLSAM=$basefilename'.everything.sam'
 	filecmds=$basefilename'_cmds_bowtie.sh'
 	
-	echo 'bowtie2 --threads=4 --mm -x' $bwt2_idx' -X' $pair_dist' --no-mixed --no-discordant -1 '$fastq1 ' -2 ' $fastq2 '-S' $ALLSAM '2>'$log > $filecmds
+	echo -e '#!/bin/bash\n\nWORKING="/data/home/nstone/HiSeq4000_data/NS14"\ncd $WORKING' '\n\nbowtie2 --threads=4 --mm -x' $bwt2_idx' -X' $pair_dist' --no-mixed --no-discordant -1 '$fastq1 ' -2 ' $fastq2 '-S' $ALLSAM '2>'$log > $filecmds
 qplz --background -c 4 -t 99 $filecmds
 
 done
