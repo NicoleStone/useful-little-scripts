@@ -5,7 +5,7 @@
 cd /data/home/nstone/HiSeq4000_data/bam.browser
 
 outdir="/path/to/peaks"
-source=*.rem_dups.bam
+source=Browser*.rem_dups.bam
 
 pval_thresh=0.1 # high false positives at this threshold -- follow with 2/3 concordance
 prefix="ENCODE_MACS_p0.1_narrow.ATAC" # prefix you want to add to output files
